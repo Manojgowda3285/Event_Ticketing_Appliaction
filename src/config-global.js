@@ -1,0 +1,1 @@
+export const HOST_API_KEY = "https://dev-api.konfhub.com/event/public/";

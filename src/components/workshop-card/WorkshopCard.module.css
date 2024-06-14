@@ -1,0 +1,65 @@
+.workshop-card{
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .25);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    padding: 4px 4px;
+    position: relative;
+}
+
+.image-container{
+    width: 100%;
+    -webkit-border-radius: 5px !important;
+    -moz-border-radius: 5px !important;
+    border-radius: 5px !important;
+}
+.workshop-title{
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 35px;
+    color: #161616;
+}
+
+.workshop-date{
+    font-family: "Prompt";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FDB14B;
+}
+.workshop-description{
+    font-family: "Prompt";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #101010;
+    margin-top: 15px;
+}
+.view-btn{
+    margin: 28px 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-family: Prompt;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.buy-btn {
+    width: auto;
+    min-width: 180px;
+    background-color: #FDB14B;
+    cursor: pointer;
+    box-shadow: 0px 4px 5px rgb(0 0 0 / 15%);
+}

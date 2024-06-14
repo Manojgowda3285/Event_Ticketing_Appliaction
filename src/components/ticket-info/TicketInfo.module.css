@@ -1,0 +1,68 @@
+
+
+.ticket-card{
+    background: #fff;
+    padding: 16px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, .15);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, .15);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .15);
+}
+.ticket-name{
+    font-family: Prompt;
+    font-size: 18px;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+.availibility{
+    background: #f0f0f0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-family: Prompt;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 6px;
+    width: max-content;
+}
+.descript{
+    font-family: Prompt;
+    font-size: 14px;
+    color: #212529;
+}
+.details{
+    font-family: Prompt;
+    font-size: 13px;
+    color: #666666;
+}
+ .ticket-price {
+    font-family: Prompt;
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.register-btn{
+    background: #fdb14b;
+    color: #fff;
+    padding: 8px 16px;
+    max-width: 130px;
+    width: 100%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 4px 5px rgb(0 0 0 / 15%);
+    -moz-box-shadow: 0px 4px 5px rgb(0 0 0 / 15%);
+    box-shadow: 0px 4px 5px rgb(0 0 0 / 15%);
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}

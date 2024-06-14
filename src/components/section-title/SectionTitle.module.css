@@ -1,0 +1,19 @@
+/* .parent{
+    
+    display: flex;
+    align-self: center;
+} */
+
+.about-heading {
+    font-family: Prompt;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 0em;
+    /* text-align: center; */
+}
+.about-img{
+     max-width: 65px;
+     margin-bottom: -35px;
+    margin-left: -15px;
+}

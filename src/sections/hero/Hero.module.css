@@ -1,0 +1,117 @@
+
+.hero_container{
+    max-width: 130px;
+    margin: 0 auto;
+}
+.event_title{
+    font-family: Prompt;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    color: #1F2439;
+    word-break: break-word !important;
+}
+
+.hero_container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.info_card{
+
+    display: flex;
+    max-height: 340px;
+    min-width: 340px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    -webkit-box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, .25);
+    box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, .25);
+    background-color: #fff;
+    z-index: 3;
+}
+.event-date{
+    font-family: Prompt;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1F2439;
+    max-width: 100%;
+}
+
+.event-city {
+    font-size: 24px;
+    line-height: 130%;
+}
+
+.buy-btn {
+    width: auto;
+    min-width: 180px;
+    background-color: #FDB14B;
+    cursor: pointer;
+    box-shadow: 0px 4px 5px rgb(0 0 0 / 15%);
+    color: #1C2520;
+    border-radius: 4px;
+    padding: 1rem;
+    font-family: Prompt;
+    font-size: 20px;
+    font-weight: 500;
+}
+.buy-btn:hover{
+    color: white;
+}
+.event-time-remainder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff !important;
+    height: 100px;
+    width: 100px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 2.25px 2.25px 2.75px rgba(48, 60, 73, .1), -1.35px -1.35px 2.25px #fff;
+    -moz-box-shadow: 2.25px 2.25px 2.75px rgba(48, 60, 73, .1), -1.35px -1.35px 2.25px #fff;
+    box-shadow: 2.25px 2.25px 2.75px rgba(48, 60, 73, .1), -1.35px -1.35px 2.25px #fff;
+}
+
+.event-time-remainder span{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fdb14b;
+}
+
+.event-time-remainder h5{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15.4825px;
+    line-height: 23px;
+    text-align: center;
+}
+
+@media (max-width: 520px) {
+    .event-time-remainder span{
+        font-size: 24px;
+
+    }
+    .event-time-remainder{
+        height: 70px;
+        width: 70px;
+    }
+    .buy-btn {
+        min-width: none !important;
+        width: 100%;
+    }
+
+  }
+
