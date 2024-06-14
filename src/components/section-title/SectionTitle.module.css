@@ -16,4 +16,9 @@
      max-width: 65px;
      margin-bottom: -35px;
     margin-left: -15px;
-}
+} 
+@media (max-width:500px){
+    .about-heading{
+        font-size: 42px;
+    }
+  }

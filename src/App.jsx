@@ -9,9 +9,9 @@ function App() {
 
 
   return (
-   <Box px="16px">
+   
     <Home/>
-    </Box> 
+   
   )
 }
 

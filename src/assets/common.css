@@ -25,6 +25,11 @@
       max-width: 1152px;
     }
   }
+  @media (max-width:600px) {
+    .container{
+      padding: 0 16px;
+    }
+  }
   
   .page-wrapper {
     overflow: hidden;
