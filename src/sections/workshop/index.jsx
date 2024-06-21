@@ -3,8 +3,12 @@ import SectionTitle from "../../components/section-title";
 import styles from "./Workshop.module.css";
 import Description from "../../components/description";
 import WorkshopCard from "../../components/workshop-card";
+import { getEventWorkshopsData } from "../../redux/slices/eventSlice";
+import { useSelector } from "react-redux";
 
 const Workshop = () => {
+  const workshop_data = useSelector(getEventWorkshopsData);
+
   return (
     <div className={styles["speakers_container"]}>
       <div className="container">
@@ -18,10 +22,14 @@ const Workshop = () => {
           <Description header="This is the description for workshop sections." />
 
           <Stack width="100%" direction="row" justifyContent="center" flexWrap="wrap" gap={7}>
-
-          <WorkshopCard image="https://dev.konfhub.com/_next/image?url=https%3A%2F%2Fdev-media.konfhub.com%2Fsponsors%2F2024%2FJune%2F10%2F1717977949758-0e87f502-f5b9-4799-b857-623780fc1415.png&w=1920&q=75" header="How to make more money"/>
-          <WorkshopCard image="https://dev.konfhub.com/_next/image?url=https%3A%2F%2Fdev-media.konfhub.com%2Fsponsors%2F2024%2FJune%2F10%2F1717978156489-c8a828a9-13ca-4572-b117-0483bafd34d9.jpg&w=1920&q=75" header="How to fight crime"/>
-          <WorkshopCard image="https://dev.konfhub.com/_next/image?url=https%3A%2F%2Fdev-media.konfhub.com%2Fsponsors%2F2024%2FJune%2F10%2F1717978363785-8225249d-f4dd-4572-826e-84093b5eb32f.jpg&w=1920&q=75" header="This is a workshop connected to a ticket"/>
+    { workshop_data.map((data , index)=>(
+      <WorkshopCard key={index} image={data?.workshop_banner_url
+      } header={data?.workshop_title}
+      speakers_image={data?.workshop_speakers
+      }
+      />
+    ))}
+          
           </Stack>
         </Stack>
       </div>
