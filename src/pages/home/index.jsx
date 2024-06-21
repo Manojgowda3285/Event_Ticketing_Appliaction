@@ -28,8 +28,6 @@ const Home = () => {
   }, [dispatch]);
   const event_data = useSelector(getEventsData);
 
-  console.log("event_data" ,event_data)
-
   for (var i = 0; i < 3; i++) {
     setTimeout(function () {
       console.log(i);

@@ -6,7 +6,6 @@ import { getEventSponsorsData } from "../../redux/slices/eventSlice";
 import { useSelector } from "react-redux";
 const Sponsers = () => {
   const sponsor_data = useSelector(getEventSponsorsData);
-  console.log("sponsor", sponsor_data);
   return (
     <div className={styles["speakers_container"]}>
       <div className="container">
@@ -41,7 +40,7 @@ const Sponsers = () => {
             gap={5}
             flexWrap="wrap"
           >
-            {sponsor_data?.categorized[0]?.sponsors?.map((sponsor, index) => (
+            { sponsor_data?.categorized && sponsor_data?.categorized[0]?.sponsors?.map((sponsor, index) => (
               <div key={index} className={styles["sponsors"]}>
                 <img
                   className={styles["sponsor-image"]}
