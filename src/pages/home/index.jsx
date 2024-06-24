@@ -14,6 +14,7 @@ import {
   fetchAsyncSpeakers,
   fetchAsyncSponsors,
   fetchAsyncWorkshops,
+  getEventLoading,
   getEventsData,
 } from "../../redux/slices/eventSlice";
 
@@ -27,12 +28,8 @@ const Home = () => {
     dispatch(fetchAsyncWorkshops());
   }, [dispatch]);
   const event_data = useSelector(getEventsData);
-
-  for (var i = 0; i < 3; i++) {
-    setTimeout(function () {
-      console.log(i);
-    }, 0);
-  }
+   const loading = useSelector(getEventLoading)
+  
 
   return (
     <div className="page_wrapper">
@@ -47,7 +44,7 @@ const Home = () => {
           { button: true },
         ]}
       />
-      {event_data ? (
+      {!loading ? (
         <div className="page-wrapper">
           <Box sx={{ paddingTop: { xs: 2, md: 5, lg: "4.5rem" } }}></Box>
 
@@ -61,16 +58,21 @@ const Home = () => {
             <div id="tickets">
               <Tickets />
             </div>
-            <div id="speakers">
-              <Speakers />
-            </div>
-            <div id="workshop">
-              <Workshop />
-            </div>
-            <div id="sponsors">
-              <Sponsers />
-            
-            </div>
+            {event_data?.has_speakers && (
+              <div id="speakers">
+                <Speakers />
+              </div>
+            )}
+            {event_data?.has_workshops && (
+              <div id="workshop">
+                <Workshop />
+              </div>
+            )}
+            {event_data?.has_sponsors && (
+              <div id="sponsors">
+                <Sponsers />
+              </div>
+            )}
           </Stack>
         </div>
       ) : (

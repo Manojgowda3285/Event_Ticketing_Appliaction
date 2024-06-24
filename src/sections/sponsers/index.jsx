@@ -2,10 +2,11 @@ import { Stack } from "@mui/material";
 import Description from "../../components/description";
 import SectionTitle from "../../components/section-title";
 import styles from "./Sponsers.module.css";
-import { getEventSponsorsData } from "../../redux/slices/eventSlice";
+import { getEventSponsorsData, getEventsData } from "../../redux/slices/eventSlice";
 import { useSelector } from "react-redux";
 const Sponsers = () => {
   const sponsor_data = useSelector(getEventSponsorsData);
+  const event_data = useSelector(getEventsData);
   return (
     <div className={styles["speakers_container"]}>
       <div className="container">
@@ -15,8 +16,8 @@ const Sponsers = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <SectionTitle header={"This is Event Sponsors"} />
-          <Description header="This is the description for workshop sections." />
+          <SectionTitle header={event_data?.sponsor_section_title} />
+          <Description header={event_data?.sponsor_section_description.replace(/<\/?p>/g, "")} />
           <Stack
             direction="row"
             justifyContent="space-between"

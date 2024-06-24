@@ -38,6 +38,7 @@ export const fetchAsyncSpeakers = createAsyncThunk(
 
 const initialState = {
   events: [],
+  loading:true,
   sponsors: [],
   speakers: [],
   workshops: [],
@@ -55,6 +56,7 @@ const eventSlice = createSlice({
       .addCase(fetchAsyncEvents.fulfilled, (state, { payload }) => {
         console.log("Fetched Successfully!");
         state.events = payload;
+        state.loading = false
       })
       .addCase(fetchAsyncEvents.rejected, (state) => {
         console.log("Rejected!");
@@ -75,5 +77,6 @@ export const getEventsData = (state) => state.events.events;
 export const getEventWorkshopsData = (state) => state.events.workshops;
 export const getEventSpeakersData = (state) => state.events.speakers;
 export const getEventSponsorsData = (state) => state.events.sponsors;
+export const getEventLoading = ( state) => state?.events.loading;
 
 export default eventSlice.reducer;

@@ -3,11 +3,12 @@ import SectionTitle from "../../components/section-title";
 import styles from "./Speakers.module.css";
 import SpeakerCard from "../../components/speaker-card";
 import Description from "../../components/description";
-import { getEventSpeakersData } from "../../redux/slices/eventSlice";
+import { getEventSpeakersData, getEventsData } from "../../redux/slices/eventSlice";
 import { useSelector } from "react-redux";
 
 const Speakers = () => {
   const speakers_data = useSelector(getEventSpeakersData);
+  const event_data = useSelector(getEventsData);
   return (
     <div className={styles["speakers_container"]}>
       <div className="container">
@@ -17,8 +18,8 @@ const Speakers = () => {
           justifyContent="center"
           alignItems="center"
         >
-          <SectionTitle header={"This is speakers section"} />
-          <Description header="This is the description for speakers section." />
+          <SectionTitle header={event_data?.speaker_section_title} />
+          <Description header={event_data?.speaker_section_description.replace(/<\/?p>/g, "")} />
 
           <Stack
             width="100%"

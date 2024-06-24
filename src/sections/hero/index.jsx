@@ -3,10 +3,12 @@ import React, { useEffect, useState } from 'react'
 import styles from "./Hero.module.css"
 import {  LanguageRounded, LaunchOutlined } from '@mui/icons-material'
 import dayjs from 'dayjs'
+import { getEventsData } from '../../redux/slices/eventSlice'
+import { useSelector } from 'react-redux'
 
 const Hero = ({end_date}) => {
   const [ timeRemaining , setTimeRemaining] = useState(0)
- 
+  const event_data = useSelector(getEventsData);
   useEffect(() => {
    
       const timerInterval = setInterval(() => {
@@ -63,7 +65,7 @@ const Hero = ({end_date}) => {
 
 <Stack spacing={3}>
   <h2 className={styles["event_title"]}>
-  KonfHub Frontend Evaluation Task
+ {event_data?.name}
   </h2>
   <span className={styles["event-date"]}>Jul 31st, 2034 6:00 AM - Aug 31st, 2034 6:00 PM IST</span>
   <Stack direction="row" gap={0.5} alignItems="center" >
@@ -84,7 +86,7 @@ const Hero = ({end_date}) => {
 <Grid item xs={12} md={6}>
    <Stack spacing={5} justifyContent="center" alignItems="center">
     <div className={styles["info_card"]}>
-        <img style={{borderRadius:"15px"}} src='https://dev-media.konfhub.com/default-event-posters/default-event-posters-image5.jpg'/>
+        <img style={{borderRadius:"15px"}} src={event_data?.event_poster_url}/>
     </div>
     <Stack direction="row" gap={{xs:2 ,sm:4} }>
         {
